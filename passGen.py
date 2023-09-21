@@ -1,4 +1,4 @@
-#! /home/thespis//pass/bin/python
+#! /usr/bin/python
 #
 # Passphrase generator
 #
@@ -57,7 +57,7 @@ class myPassword ():
 if __name__ == '__main__':
     
     parser = argparse.ArgumentParser(description='Password and Passphrase generator', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument("total", default=3, type=int, help="Number of total passwords and pass phrases to generate")
+    parser.add_argument("total", nargs='?', default=3, type=int, help="Number of total passwords and pass phrases to generate")
     parser.add_argument("-l", "--length", default=12, type=int, help="Password length.")
     args = parser.parse_args()
 
